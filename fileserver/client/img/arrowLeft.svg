@@ -1,0 +1,48 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="10px" height="15px" viewBox="0 0 10 15">
+<defs>
+<image id="Screen_Shot_2018_02_14_at_3_20_06_PM_png" x="0" y="0" width="1920" height="1080" xlink:href="./images/Screen_Shot_2018_02_14_at_3_20_06_PM_png.png"/>
+
+<pattern id="Pattern_1" patternUnits="userSpaceOnUse" patternTransform="matrix( 1, 0, 0, 1, -101.85,931.25) " width="1920" height="1080">
+<use xlink:href="#Screen_Shot_2018_02_14_at_3_20_06_PM_png"/>
+</pattern>
+
+<pattern id="Pattern_2" patternUnits="userSpaceOnUse" patternTransform="matrix( 1, 0, 0, 1, -231.85,931.75) " width="1920" height="1080">
+<use xlink:href="#Screen_Shot_2018_02_14_at_3_20_06_PM_png"/>
+</pattern>
+
+<pattern id="Pattern_3" patternUnits="userSpaceOnUse" patternTransform="matrix( 1, 0, 0, 1, 133.15,899.25) " width="1920" height="1080">
+<use xlink:href="#Screen_Shot_2018_02_14_at_3_20_06_PM_png"/>
+</pattern>
+
+<pattern id="Pattern_4" patternUnits="userSpaceOnUse" patternTransform="matrix( 1, 0, 0, 1, -689,920) " width="1920" height="1080">
+<use xlink:href="#Screen_Shot_2018_02_14_at_3_20_06_PM_png"/>
+</pattern>
+
+<g id="Layer0_0_FILL">
+<path fill="#FFFFFF" stroke="none" d="
+M 10 0
+L 0 7.5 9.95 15 9.95 12.95 2.75 7.5 10 2.05 10 0 Z"/>
+
+<path fill="url(#Pattern_1)" stroke="none" d="
+M 1080.9 1510.9
+L 1080.9 1465.9 1036.9 1465.9 1036.9 1510.9 1080.9 1510.9 Z"/>
+
+<path fill="url(#Pattern_2)" stroke="none" d="
+M 1124.35 1465.9
+L 1080.9 1465.9 1080.9 1510.9 1124.35 1510.9 1124.35 1465.9 Z"/>
+
+<path fill="url(#Pattern_3)" stroke="none" d="
+M 1271.9 1429.4
+L 1271.9 1431.9 1317.35 1431.9 1317.35 1481.9 1271.9 1481.9 1271.9 1486.4 1214.6 1486.4 1214.6 1553.65 1489.35 1553.65 1489.35 1482.9 1444.35 1482.9 1444.35 1433.4 1489.35 1433.4 1489.35 1397.4 1549.6 1397.4 1549.6 1365.15 1214.6 1365.15 1214.6 1429.4 1271.9 1429.4 Z"/>
+
+<path fill="url(#Pattern_4)" stroke="none" d="
+M 727.45 1358.4
+L 1231 1358.4 1231 920 -689 920 -689 2000 1231 2000 1231 1626.4 727.45 1626.4 727.45 1358.4 Z"/>
+</g>
+</defs>
+
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Layer0_0_FILL"/>
+</g>
+</svg>

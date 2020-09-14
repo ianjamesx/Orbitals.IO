@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<title>orbitals.io</title>
+
+	<meta charset="UTF-8">
+	<meta name="description" content="compete with players from around the world in this multiplayer online game">
+	<meta name="keywords" content="orbitals, io, game, multiplayer, online">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="/client/css/style.css">
+	<link rel="shortcut icon" type="image/png" href="/client/img/favicon.png"/>
+
+</head>
+
+<body onload="Game.findGameServer();">
+
+<div class="loading">
+
+	<h1>connecting</h1>
+
+	<h2>finding you a server to connect to</h2>
+
+</div>
+
+<div id="mainNav" class="overlay" style="display:none;">
+
+	<div id="main-content" class="overlay-content main-menu">
+
+		<div class="title-class">
+		<h1 id="title" style="font-size: 4.5em">orbitals.io</h1>
+		</div>
+
+ 				<form class="pure-form" onSubmit="return false;">
+
+ 					<fieldset>
+
+ 					 <input id="name" type="text" maxlength="15" placeholder="your nickname" tabindex="-1"></input>
+					 <div class="divider"></div>
+					 <button class="squareButton" id="settings" onSubmit="return false;"><i class="fa fa-gear"></i></button>
+					 <div class="divider"></div>
+					 <button class="squareButton" id="skins" onSubmit="return false;"><i class="	fa fa-circle-o"></i></button>
+
+ 					</fieldset>
+
+ 				</form>
+
+			<span style="display:block; height: 40px;"></span>
+
+			<button id="startBtn" type="button" tabindex="-1" class="roundButton">play</button><br>
+
+			<span style="display:block; height: 40px;"></span>
+
+			<p id="instructions" style="font-size: 1em; opacity: .25;">try to capture electrons in your orbit without hitting them</p>
+
+		</div>
+
+	 <div class="fixedCenterLinks">
+
+		 <p><a href="http://orbitals.io/contact" target="_blank">contact</a></p>
+
+	</div>
+
+</div>
+
+ <div id="skinsNav" class="overlay" style="display:none;">
+
+	 <div id="skins-content" class="overlay-content skins-class">
+
+		<h1>choose a skin</h1>
+
+		<span style="display:block; height: 20px;"></span>
+
+		<div class="pure-g">
+
+			<div class="pure-u-1-3">
+
+				<span style="display:block; height: 32px;"></span>
+
+				<button id="leftCtrl" class="menuButton arrowBtn" style="padding: 19px;">
+
+					<img src="/client/img/arrowLeft.svg" style="display:inline-block;">
+
+				</button>
+
+			</div>
+
+			<div class="pure-u-1-3">
+
+				<img id="skinImg" src="/client/img/blue.svg" style="position: relative; top: 20px;" alt="skin" width="80" height="80">
+
+			</div>
+
+			<div class="pure-u-1-3">
+
+				<span style="display:block; height: 32px;"></span>
+
+				<button id="rightCtrl" class="menuButton arrowBtn" style="padding: 20px;">
+
+					<img src="/client/img/arrowRight.svg" style="display:inline-block;">
+
+				</button>
+
+			</div>
+
+		</div>
+
+		<span style="display:block; height: 100px;"></span>
+
+		<button id="skinsBack" type="button" tabindex="-1" class="roundButton">select</button>
+
+	</div>
+
+ </div>
+
+ <div id="settingsNav" class="overlay" style="display:none;">
+
+	 <div id="settings-content" class="overlay-content settings-class">
+
+		<h1>game settings</h1>
+
+		<span style="display:block; height: 35px;"></span>
+
+		<div class="pure-g">
+
+			<div class="pure-u-1-4"></div>
+
+			<div class="pure-u-1-4" style="text-align: center;">
+
+					<h2>show fps and ping</h2>
+
+					<span style="display:block; height: 5px;"></span>
+
+					<h2>show usernames</h2>
+
+					<span style="display:block; height: 5px;"></span>
+
+					<h2>show leaderboard</h2>
+
+					<span style="display:block; height: 5px;"></span>
+
+				<br>
+
+			</div>
+
+			<div class="pure-u-1-4" style="text-align: right;">
+
+		 		 <form onSubmit="return false;">
+
+					 <span style="display:block; height: 24px;"></span>
+
+					 <label class="switch">
+
+							<input type="checkbox" name="showFPS" id="showFPS">
+							<span class="slider round"></span>
+
+					 </label>
+
+					 <br>
+
+						<span style="display:block; height: 28px;"></span>
+
+ 		 				<label class="switch">
+
+ 		 				  <input type="checkbox" name="showNames" id="showNames">
+ 		 				  <span class="slider round"></span>
+
+ 		 				</label>
+
+ 						<br>
+
+						<span style="display:block; height: 30px;"></span>
+
+ 		 				<label class="switch">
+
+ 		 				  <input type="checkbox" name="showBoard" id="showBoard">
+ 		 				  <span class="slider round"></span>
+
+ 		 				</label>
+
+ 						<br>
+
+		  	 	</form>
+
+				</div>
+
+				<div class="pure-u-1-4"></div>
+
+			</div>
+
+			<span style="display:block; height: 35px;"></span>
+
+			<button id="settingsBack" type="button" tabindex="-1" class="roundButton">confirm</button>
+
+	 </div>
+
+</div>
+
+<div id="statsNav" class="overlay" style="display:none;">
+
+	<div id="stats-content" class="overlay-content stats-class">
+
+		<h3>your stats</h3>
+
+		<div class="pure-g">
+
+			<div class="pure-u-1-2">
+
+				<h4>atoms killed</h4>
+				<p id="atoms"></p>
+
+				<span style="display:block; height: 10px;"></span>
+
+				<h4>top place</h4>
+				<p id="place"></p>
+
+			</div>
+
+			<div class="pure-u-1-2">
+
+				<h4>largest orbit</h4>
+				<p id="orbit"></p>
+
+				<span style="display:block; height: 10px;"></span>
+
+				<h4>time alive</h4>
+				<p id="time"></p>
+
+			</div>
+
+		</div>
+
+		<span style="display:block; height: 50px;"></span>
+
+		<button id="statsContinue" type="button" tabindex="-1" class="roundButton">continue</button>
+
+	</div>
+
+</div>
+
+</body>
+
+<script type="text/javascript" src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/client/js/objects.js"></script>
+<script type="text/javascript" src="/client/js/ui.js"></script>
+<script type="text/javascript" src="/client/js/game.js"></script>
+<script type="text/javascript" src="/client/js/servComm.js"></script>
+
+	<canvas id="gameCanvas" class="gameStage" width="1920" height="1080">
+
+		Your internet browser does not support HTML5. We recommend the latest version of Google Chrome,
+		Mozilla Firefox, Internet Explorer, Opera, or Safari in order to play.
+
+	</canvas>
+
+<canvas id="hudCanvas" class="gameStage" width="1920" height="1080"></canvas>
+
+</html>

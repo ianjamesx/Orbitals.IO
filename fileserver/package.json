@@ -1,0 +1,33 @@
+{
+  "name": "orbitals.io",
+  "version": "1.0.1",
+  "description": "Play with other players from around the world as you fight your way to the top of the leaderboard in this free, real-time multiplayer game",
+  "main": "app.js",
+  "dependencies": {
+    "ws": "^3.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ian",
+  "license": "ISC",
+  "keywords": [
+    "orbitals",
+    "orbitals.io",
+    "free",
+    "in-browser",
+    "new",
+    "online",
+    "multiplayer",
+    "browser",
+    "game",
+    "io",
+    "io game",
+    "real-time",
+    "io game",
+    "HTML5",
+    "JavaScript",
+    "Socket.io"
+  ]
+}
